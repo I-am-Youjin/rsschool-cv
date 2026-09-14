@@ -1,10 +1,283 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>My CV</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CV of Evgeniy Tupenko, Frontend Developer"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Evgeniy Tupenko — Frontend Developer</title>
   </head>
-  <body></body>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="#top" aria-label="Go to the top">ET</a>
+        <nav class="navigation" aria-label="Main navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#about">About</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#experience">Experience</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#education">Education</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="main">
+      <div class="main__container">
+        <section class="profile" aria-labelledby="profile-name">
+          <div class="profile__avatar"></div>
+          <div class="profile__content">
+            <p class="profile__profession">Frontend Developer</p>
+            <h1 id="profile-name" class="profile__name">Evgeniy Tupenko</h1>
+          </div>
+        </section>
+
+        <div class="cv-layout">
+          <aside class="cv-layout__sidebar">
+            <section
+              id="contact"
+              class="cv-section cv-section--compact"
+              aria-labelledby="contact-title"
+            >
+              <h2 id="contact-title" class="cv-section__title">Contact</h2>
+              <address class="contact">
+                <ul class="contact__list">
+                  <li class="contact__item">
+                    <span class="contact__label">Email</span>
+                    <a class="contact__link" href="mailto:atupenko@gmail.com">
+                      atupenko@gmail.com
+                    </a>
+                  </li>
+                  <li class="contact__item">
+                    <span class="contact__label">Telegram</span>
+                    <a
+                      class="contact__link"
+                      href="https://t.me/MyNameIs_Evgeniy"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      @MyNameIs_Evgeniy
+                    </a>
+                  </li>
+                  <li class="contact__item">
+                    <span class="contact__label">LinkedIn</span>
+                    <a
+                      class="contact__link"
+                      href="https://www.linkedin.com/in/mynameisevgeniy"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      linkedin.com/in/mynameisevgeniy
+                    </a>
+                  </li>
+                  <li class="contact__item">
+                    <span class="contact__label">GitHub</span>
+                    <a
+                      class="contact__link"
+                      href="https://github.com/I-am-Youjin"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      github.com/I-am-Youjin
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </section>
+
+            <section
+              class="cv-section cv-section--compact"
+              aria-labelledby="skills-title"
+            >
+              <h2 id="skills-title" class="cv-section__title">Skills</h2>
+              <ul class="skills__list">
+                <li class="skills__item">HTML</li>
+                <li class="skills__item">CSS, SCSS, SASS</li>
+                <li class="skills__item">JavaScript, TypeScript, PHP</li>
+                <li class="skills__item">React, Vue, Svelte</li>
+                <li class="skills__item">Redux, Zustand</li>
+                <li class="skills__item">CSS-in-JS and component libraries</li>
+                <li class="skills__item">Git, GitHub, GitLab</li>
+                <li class="skills__item">Node, npm, Webpack, Gulp, Vite</li>
+                <li class="skills__item">Docker and CI/CD</li>
+                <li class="skills__item">AI-assisted development</li>
+              </ul>
+            </section>
+
+            <section
+              class="cv-section cv-section--compact"
+              aria-labelledby="languages-title"
+            >
+              <h2 id="languages-title" class="cv-section__title">Languages</h2>
+              <ul class="languages__list">
+                <li class="languages__item">
+                  <span>English</span><strong>B1</strong>
+                </li>
+                <li class="languages__item">
+                  <span>Belarussian</span><strong>Native</strong>
+                </li>
+                <li class="languages__item">
+                  <span>Russian</span><strong>Native</strong>
+                </li>
+              </ul>
+            </section>
+          </aside>
+
+          <div class="cv-layout__content">
+            <section
+              id="about"
+              class="cv-section"
+              aria-labelledby="about-title"
+            >
+              <h2 id="about-title" class="cv-section__title">About me</h2>
+              <p class="cv-section__text">
+                I am a passionate, easy-going and communicative programmer with
+                a strong foundation in JavaScript and the modern frontend
+                ecosystem. I thrive on solving complex problems and building
+                interfaces that genuinely improve the user experience.
+              </p>
+            </section>
+
+            <section
+              id="experience"
+              class="cv-section"
+              aria-labelledby="experience-title"
+            >
+              <h2 id="experience-title" class="cv-section__title">
+                Experience
+              </h2>
+              <div class="experience">
+                <article class="experience__item">
+                  <span class="experience__period">Jul 2025 — Present</span>
+                  <div class="experience__details">
+                    <h3 class="experience__title">Frontend Developer</h3>
+                    <p class="experience__company">AIBY</p>
+                    <ul class="experience__list">
+                      <li>Creating banners for webview</li>
+                      <li>Svelte component creation</li>
+                      <li>Implementing landings and corporate sites</li>
+                      <li>Writing styles using Less</li>
+                      <li>Building forms with PHP and fixing bugs</li>
+                    </ul>
+                    <p class="experience__meta">
+                      <strong>Technologies:</strong> TypeScript, Svelte, Vue,
+                      SCSS, JavaScript, Gulp, PHP, i18n
+                    </p>
+                    <p class="experience__meta">
+                      <strong>Tools:</strong> VS Code, Git
+                    </p>
+                  </div>
+                </article>
+
+                <article class="experience__item">
+                  <span class="experience__period">Jul 2024 — Present</span>
+                  <div class="experience__details">
+                    <h3 class="experience__title">Frontend Developer</h3>
+                    <p class="experience__company">Tail Talks</p>
+                    <ul class="experience__list">
+                      <li>Developing the client side of a web app</li>
+                      <li>React component creation</li>
+                      <li>Writing styles using Less</li>
+                      <li>Code review and bug fixing</li>
+                    </ul>
+                    <p class="experience__meta">
+                      <strong>Technologies:</strong> TypeScript, React, SCSS,
+                      Redux, Webpack
+                    </p>
+                    <p class="experience__meta">
+                      <strong>Tools:</strong> VS Code, Git
+                    </p>
+                  </div>
+                </article>
+
+                <article class="experience__item">
+                  <span class="experience__period">Apr 2024 — Jun 2024</span>
+                  <div class="experience__details">
+                    <h3 class="experience__title">Frontend Developer</h3>
+                    <p class="experience__company">MastermindCMS</p>
+                    <ul class="experience__list">
+                      <li>Developing the client side of a web app</li>
+                      <li>Cooperating closely with the backend team</li>
+                      <li>Working out application logic</li>
+                      <li>Writing component styles</li>
+                    </ul>
+                    <p class="experience__meta">
+                      <strong>Technologies:</strong> JavaScript, Lit, CSS
+                    </p>
+                    <p class="experience__meta">
+                      <strong>Tools:</strong> VS Code, Git
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section
+              id="education"
+              class="cv-section"
+              aria-labelledby="education-title"
+            >
+              <h2 id="education-title" class="cv-section__title">Education</h2>
+              <div class="education">
+                <article class="education__item">
+                  <h3 class="education__title">
+                    Belarusian National Technical University (BNTU)
+                  </h3>
+                  <p class="education__description">Mining Engineer</p>
+                  <span class="education__period">Sep 2016 — Jul 2021</span>
+                </article>
+                <article class="education__item">
+                  <h3 class="education__title">TeachMeSkills Courses</h3>
+                  <p class="education__description">
+                    Frontend Developer program
+                  </p>
+                  <span class="education__period">Feb 2023 — Oct 2023</span>
+                </article>
+                <article class="education__item">
+                  <h3 class="education__title">Yandex Summer School</h3>
+                  <p class="education__description">
+                    Frontend Developer program
+                  </p>
+                  <span class="education__period">Jun 2025 — Aug 2025</span>
+                  <p class="education__text">
+                    An intensive, project-based frontend track combining live
+                    lectures, code reviews, and a supervised practical
+                    internship.
+                  </p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <img
+          class="footer__logo"
+          src="images/rs-school-logo.svg"
+          alt="RSSchool"
+        />
+        <span>© 2026 Evgeniy Tupenko</span>
+        <a
+          class="footer__link"
+          href="https://github.com/I-am-Youjin/rsschool-cv"
+        >
+          GitHub repository
+        </a>
+      </div>
+    </footer>
+  </body>
 </html>

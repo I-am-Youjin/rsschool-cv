@@ -1,0 +1,379 @@
+:root {
+  --color-bg: #fff;
+  --color-surface: #fff;
+  --color-text: #202124;
+  --color-muted: #70716e;
+  --color-accent: rgb(255, 238, 0);
+  --color-accent-light: #fff;
+  --color-border: #fff0e6;
+  --shadow: 0 20px 60px rgb(54 42 31 / 8%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.header__container,
+.main__container,
+.footer__container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__container,
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+.header__logo {
+  color: var(--color-accent);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  background: var(--color-text);
+}
+
+.navigation__list {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__link,
+.footer__link {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navigation__link:hover,
+.footer__link:hover,
+.contact__link:hover {
+  color: var(--color-accent);
+  background: var(--color-text);
+}
+
+.main {
+  padding: 72px 0 96px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 44px;
+  align-items: center;
+  padding: 48px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+}
+
+.profile__avatar {
+  display: grid;
+  width: 180px;
+  height: 180px;
+  place-items: center;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  background: var(--color-accent-light);
+  background-image: url("../images/avatar.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.profile__avatar-placeholder {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.profile__profession {
+  margin: 0 0 8px;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding-inline: 2px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--color-text);
+  display: inline-block;
+}
+
+.profile__name {
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.profile__summary {
+  max-width: 590px;
+  margin: 24px 0 0;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+.cv-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.7fr);
+  gap: 72px;
+  margin-top: 72px;
+}
+
+.cv-section {
+  padding-bottom: 64px;
+}
+
+.cv-section--compact {
+  padding-bottom: 48px;
+}
+
+.cv-section__title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 24px;
+  font-size: 1.45rem;
+}
+
+.cv-section__title::after {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+  content: "";
+}
+
+.cv-section__text {
+  margin: 0 0 16px;
+  color: var(--color-muted);
+}
+
+.contact__list,
+.skills__list,
+.languages__list,
+.experience__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.contact__label {
+  color: var(--color-text);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.contact__link {
+  overflow-wrap: anywhere;
+  color: var(--color-text);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills__item {
+  padding: 6px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.languages__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.languages__item strong {
+  color: var(--color-accent);
+  box-shadow: 0 1px 0 var(--color-text);
+  background: var(--color-text);
+}
+
+.experience__item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  padding: 0 0 40px;
+}
+
+.experience__period,
+.education__period {
+  color: var(--color-accent);
+  padding-inline: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--color-text);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.experience__title,
+.education__title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.experience__company {
+  margin: 2px 0 16px;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.experience__list {
+  margin-bottom: 16px;
+  padding-left: 18px;
+  list-style: disc;
+  color: var(--color-muted);
+}
+
+.experience__meta {
+  margin: 6px 0 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+.education__item {
+  padding: 0 0 28px 24px;
+  border-left: 2px solid var(--color-accent-light);
+}
+
+.education__description,
+.education__text {
+  color: var(--color-muted);
+}
+
+.education__description {
+  margin: 6px 0;
+}
+
+.education__text {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+}
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.footer__logo {
+  width: 120px;
+  height: auto;
+}
+
+@media (max-width: 720px) {
+  .header__container,
+  .main__container,
+  .footer__container {
+    width: min(100% - 32px, 560px);
+  }
+
+  .header__container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .navigation__list {
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  .main {
+    padding: 32px 0 64px;
+  }
+
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 24px;
+  }
+
+  .profile__avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .cv-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 48px;
+  }
+
+  .cv-layout__sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .cv-layout__sidebar .cv-section:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .experience__item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .footer__container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-layout__sidebar {
+    display: block;
+  }
+
+  .profile__name {
+    font-size: 2.8rem;
+  }
+}
